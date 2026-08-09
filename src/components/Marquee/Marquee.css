@@ -1,0 +1,46 @@
+.marquee {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-green-deep);
+  padding-block: 20px;
+  margin-block: 4px;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+.marquee__group {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.marquee__item {
+  flex-shrink: 0;
+  font-size: clamp(2rem, 8vw, 4.4rem);
+  color: var(--color-cream);
+  padding-inline: 0.6em;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+    transform: translateX(0);
+  }
+
+  .marquee__group:last-child {
+    display: none;
+  }
+}

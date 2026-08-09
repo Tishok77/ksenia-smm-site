@@ -1,0 +1,85 @@
+.consultation {
+  padding-block: 88px;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  text-align: center;
+}
+
+.consultation__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 720px;
+}
+
+.consultation__heading {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  font-size: clamp(2.4rem, 10.5vw, 4.2rem);
+}
+
+.consultation__subheading {
+  margin-top: 14px;
+  color: var(--color-green-soft);
+}
+
+.consultation__text {
+  margin-top: 22px;
+  font-size: clamp(1rem, 4vw, 1.15rem);
+  line-height: 1.55;
+  opacity: 0.88;
+  max-width: 52ch;
+}
+
+.consultation__cta {
+  margin-top: 34px;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  width: 100%;
+  height: auto;
+  padding-block: 16px;
+}
+
+/* The label is long ("Получить бесплатную консультацию") — on narrow
+   screens it needs to wrap onto two lines instead of overflowing the
+   pill. min-width: 0 lets a flex item shrink below its content's
+   unbroken width so white-space: normal can actually take effect. */
+.consultation__cta .btn__label {
+  white-space: normal;
+  min-width: 0;
+  text-align: center;
+}
+
+.consultation__cta:hover {
+  background: var(--color-green-soft);
+  color: var(--color-ink);
+}
+
+.consultation__note {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.consultation__note code {
+  font-family: monospace;
+  background: rgba(244, 239, 227, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (min-width: 480px) {
+  .consultation__cta {
+    width: auto;
+    padding-inline: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .consultation {
+    padding-block: 140px;
+  }
+}

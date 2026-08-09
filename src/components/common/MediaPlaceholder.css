@@ -1,0 +1,79 @@
+.media-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  isolation: isolate;
+}
+
+.media-placeholder--media {
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--color-cream-deep);
+}
+
+.media-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    128deg,
+    rgba(28, 26, 21, 0.05) 0,
+    rgba(28, 26, 21, 0.05) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+  pointer-events: none;
+}
+
+.media-placeholder--sage {
+  background: linear-gradient(155deg, var(--color-green-soft) 0%, var(--color-green-soft-tint) 100%);
+  color: var(--color-green-deep-dark);
+}
+
+.media-placeholder--deep {
+  background: linear-gradient(155deg, var(--color-green-deep) 0%, var(--color-green-soft) 100%);
+  color: var(--color-white);
+}
+
+.media-placeholder--cream {
+  background: linear-gradient(155deg, var(--color-cream-deep) 0%, var(--color-cream) 100%);
+  color: var(--color-ink-soft);
+  border: 1px solid rgba(28, 26, 21, 0.1);
+}
+
+.media-placeholder--ink {
+  background: linear-gradient(155deg, var(--color-ink-soft) 0%, var(--color-ink) 100%);
+  color: var(--color-cream);
+}
+
+.media-placeholder__mark {
+  display: inline-flex;
+  opacity: 0.85;
+}
+
+.media-placeholder__label {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  text-align: center;
+  padding-inline: 12%;
+}
+
+.media-placeholder__caption {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  text-align: center;
+  padding-inline: 8%;
+}
