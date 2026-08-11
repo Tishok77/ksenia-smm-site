@@ -19,9 +19,6 @@ export default function Footer() {
 
         <div className="footer__row">
           <div className="footer__contacts">
-            <a href={contacts.instagramUrl} target="_blank" rel="noopener noreferrer">
-              Instagram — {contacts.instagramHandle}
-            </a>
             <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
           </div>
 
