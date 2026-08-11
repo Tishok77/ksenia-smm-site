@@ -14,6 +14,9 @@
 
 .media-placeholder--media {
   object-fit: cover;
+  /* Each photo sets --photo-position itself (see Hero.css / About.css) so
+     framing can be tuned per image instead of always defaulting to center. */
+  object-position: var(--photo-position, 50% 50%);
   border-radius: var(--radius-md);
   background: var(--color-cream-deep);
 }

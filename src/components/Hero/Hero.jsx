@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import MediaPlaceholder from '../common/MediaPlaceholder'
 import { useContactModal } from '../../context/useContactModal'
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
+import heroPhoto from '../../assets/images/hero/IMG_7138.webp'
 import './Hero.css'
 
 const STAGGER_MS = [0, 160, 320, 480, 620, 620]
@@ -47,11 +48,10 @@ export default function Hero() {
           <div className={`hero__photo-wrap hero__reveal ${isIn ? 'is-in' : ''}`} style={delay(3)}>
             <MediaPlaceholder
               kind="image"
-              tone="sage"
+              src={heroPhoto}
               eager
+              fetchPriority="high"
               alt="Ксения"
-              label="Ксения"
-              caption="IMG_4106.jpg"
               className="hero__photo"
             />
             <p

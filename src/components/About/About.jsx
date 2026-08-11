@@ -1,6 +1,8 @@
 import MediaPlaceholder from '../common/MediaPlaceholder'
 import { useReveal } from '../../hooks/useReveal'
 import { useParallax } from '../../hooks/useParallax'
+import aboutMainPhoto from '../../assets/images/about/IMG_3056.jpg'
+import aboutSecondaryPhoto from '../../assets/images/about/IMG_4106.jpg'
 import './About.css'
 
 export default function About() {
@@ -42,16 +44,13 @@ export default function About() {
           <div ref={photosRef} className={`about__photos reveal ${photosVisible ? 'is-visible' : ''}`}>
             <MediaPlaceholder
               className="about__photo-main"
-              tone="cream"
-              alt="Ксения за работой"
-              label="Ксения"
-              caption="IMG_8682.jpg"
+              src={aboutMainPhoto}
+              alt="Ксения"
             />
             <MediaPlaceholder
               className="about__photo-secondary"
-              tone="sage"
+              src={aboutSecondaryPhoto}
               alt="Ксения"
-              caption="IMG_3056.jpg"
             />
           </div>
         </div>

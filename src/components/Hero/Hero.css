@@ -81,6 +81,10 @@
   aspect-ratio: 3 / 4;
   width: 100%;
   box-shadow: 0 18px 40px rgba(28, 26, 21, 0.16);
+  /* The source photo is already native 3:4 (matches this box exactly), so
+     object-fit: cover has no cropping to do — this is just a safety net in
+     case that ever changes. */
+  --photo-position: 50% 22%;
 }
 
 .hero__tail {

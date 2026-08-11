@@ -1,7 +1,9 @@
 # About photos
 
-- `IMG_8682.jpg` — main photo for the "Обо мне" section.
-- `IMG_3056.jpg` — secondary photo (optional).
+- `IMG_3056.jpg` — main photo (`.about__photo-main`).
+- `IMG_4106.jpg` — secondary, overlapping photo (`.about__photo-secondary`).
 
-Import in `src/components/About/About.jsx` and pass as `src` to the
-relevant `<MediaPlaceholder>`.
+Both are wired up in `src/components/About/About.jsx`. Framing is tuned per
+photo via the `--photo-position` custom property in `About.css` (different
+values for mobile vs. desktop) — if you swap either file for a different
+photo, re-check that value against the new photo's composition.
